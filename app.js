@@ -31,7 +31,7 @@ function getTasks() {
     tasks = JSON.parse(localStorage.getItem("tasks"));
   }
 
-  tasks.forEach(function(task) {
+  tasks.forEach(function (task) {
     // Create li element
     const li = document.createElement("li");
     // Add class
@@ -124,7 +124,7 @@ function removeTaskFromLocalStorage(taskItem) {
     tasks = JSON.parse(localStorage.getItem("tasks"));
   }
 
-  tasks.forEach(function(task, index) {
+  tasks.forEach(function (task, index) {
     if (taskItem.textContent === task) {
       tasks.splice(index, 1);
     }
@@ -156,7 +156,7 @@ function clearTasksFromLocalStorage() {
 function filterTasks(e) {
   const text = e.target.value.toLowerCase();
 
-  document.querySelectorAll(".collection-item").forEach(function(task) {
+  document.querySelectorAll(".collection-item").forEach(function (task) {
     const item = task.firstChild.textContent;
     if (item.toLowerCase().indexOf(text) != -1) {
       task.style.display = "block";

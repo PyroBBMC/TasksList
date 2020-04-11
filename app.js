@@ -104,7 +104,7 @@ function storeTaskInLocalStorage(task) {
 // Remove Task
 function removeTask(e) {
   if (e.target.parentElement.classList.contains("delete-item")) {
-    if (confirm("Are You Sure")) {
+    if (confirm("This will permately delete selected task")) {
       e.target.parentElement.parentElement.remove();
 
       // Remove from Local storage
@@ -136,7 +136,7 @@ function removeTaskFromLocalStorage(taskItem) {
 // Clear Tasks
 function clearTasks() {
   // taskList.innerHTML = "";
-  if (confirm("Are you sure")) {
+  if (confirm("This will permanetly delete all Tasks")) {
     // Faster
     while (taskList.firstChild) {
       taskList.removeChild(taskList.firstChild);

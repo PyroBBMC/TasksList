@@ -110,7 +110,7 @@ function removeTask(e) {
       // Remove from Local storage
       removeTaskFromLocalStorage(e.target.parentElement.parentElement);
 
-      console.log(e.target);
+      // console.log(e.target);
     }
   }
 }
